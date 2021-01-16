@@ -1,6 +1,6 @@
 ﻿programa
 {
-	
+	// Foram 5 horas tentando encontrar uma lógica para resolver -não totalmente 5h sem parar- 
 	funcao inicio()
 	{
 		inteiro ni = 1, aux
