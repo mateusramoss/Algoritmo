@@ -1,14 +1,15 @@
 programa
 {
+	//--------------------------------------------------------------------------------------------------- 
 	//Resolvido por: Mateusramos
 	/*
 	 * Desenvolver um algoritmo que efetue a soma de 
 	 * todos os números ímpares que são múltiplos de três e que se encontram no conjunto dos números de 1 até 500.
-   *
-	 * Fonte do exercício(sem respostas):
+	 * 
+	 * Fonte do exercício(não respondido):
 	 * https://docente.ifrn.edu.br/jonathanpereira/disciplinas/algoritmos/lista-de-exercicios-estruturas-de-repeticao-1/view
 	 */
-	
+	//--------------------------------------------------------------------------------------------------- 
 	funcao inicio()
 	{
 		inteiro impar = 0
@@ -16,19 +17,19 @@ programa
 		inteiro cont2 = 0
 		
 		para(inteiro cont = 0;cont <= 500;cont = cont++){
-      //--------------------------------------------------------------------------------------------------- 
-          /*
-           * Para que não haja repetição do valor já mostrado(é mostrado o mesmo número 3 vezes) no 
-           * console, eu coloquei um contador dentro de outro, os dois devem estar em sitonia para que 
-           * possam funcionar. Retire e veja:
-              se (cont2 == 3){
-                  cont2 = cont2*0	
-                }
-                cont2 = cont2 + 1
-           -A multiplicação: (cont2 = (cont2*0)) é para zerar o contador, quando ele atingir for para a proxima
-            contagem.
-           */
-      //--------------------------------------------------------------------------------------------------- 
+			//--------------------------------------------------------------------------------------------------- 
+			/*
+			 * Para que não haja repetição do valor já mostrado(é mostrado o mesmo número 3 vezes) no 
+			 * console, eu coloquei um contador dentro de outro, os dois devem estar em sitonia para que 
+			 * possam funcionar. Retire e veja:
+					se (cont2 == 3){
+							cont2 = cont2*0	
+						}
+						cont2 = cont2 + 1
+			 -A multiplicação: (cont2 = (cont2*0)) é para zerar o contador, quando ele atingir for para a proxima
+			  contagem.
+			 */
+			//--------------------------------------------------------------------------------------------------- 
 			se (cont2 == 3){
 				se(cont % 3 == 0){ 
 					mult = cont
