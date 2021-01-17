@@ -21,12 +21,14 @@ programa
 			/*
 			 * Para que não haja repetição do valor já mostrado(é mostrado o mesmo número 3 vezes) no 
 			 * console, eu coloquei um contador dentro de outro, os dois devem estar em sitonia para que 
-			 * possam funcionar. Retire e veja:
-					se (cont2 == 3){
-							cont2 = cont2*0	
-						}
-						cont2 = cont2 + 1
-			 -A multiplicação: (cont2 = (cont2*0)) é para zerar o contador, quando ele atingir for para a proxima
+			 * possam funcionar. Para ver as mudanças retire do códgo:
+					|---------------------------------|
+					|se (cont2 == 3){		  |
+					|		cont2 = cont2*0	  |
+					|	}			  |
+					|	cont2 = cont2 + 1	  |
+					|---------------------------------|
+			 <°o°>) A multiplicação: (cont2 = (cont2*0)) é para zerar o contador, quando ele atingir for para a proxima
 			  contagem.
 			 */
 			//--------------------------------------------------------------------------------------------------- 
