@@ -1,0 +1,82 @@
+programa
+{
+	//A explicação da lógica do código está na parte de baixo do " "núcleo" do código"
+	funcao inicio()
+	{
+		real altura_inicial, compara
+		real maior_altura, menor_altura
+		real altura
+		cadeia nome2, nome3, nome 
+
+		escreva("Quantas pessoas serão comparadas? ")
+			leia(compara)
+		limpa()
+		escreva("Digite o 1° nome: ")
+				leia(nome)
+		escreva("\nDigite a altura (em metros) de ",nome,": ")
+				leia(altura_inicial)
+		limpa()
+		
+		maior_altura = altura_inicial
+		nome2 = nome
+		//----------
+		menor_altura = altura_inicial
+		nome3 = nome
+		
+		para(inteiro contador = 2; contador <= compara; contador++){
+    // o contador começa recebendo 2 porque a primeira altura já foi recebida fora da estrutura PARA.
+    //  não faz diferença na contagem que foi perguntado no início(linha 11) do código.
+			escreva("Digite o ",contador,"° nome: ")
+				leia(nome)
+			escreva("\nDigite a altura (em metros) de ",nome,": ")
+				leia(altura)
+			limpa()
+			se (altura > maior_altura){
+				maior_altura = altura
+				nome2 = nome
+			}
+			se (altura < menor_altura){
+				menor_altura = altura
+				nome3 = nome
+			}
+		}
+		escreva("O(a) maior é ",nome2 ," com ",maior_altura," metros de altura\n")
+		escreva("O(a) menor é ",nome3," com ",menor_altura," metros de altura")
+	}
+}
+
+|-----------------------------------------------------------------------------------|
+|                              NÚCLEO LÓGICO DO PROBLEMA                            |
+|-----------------------------------------------------------------------------------|
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro Vma, Vme, Ni // São as variáveis maior,variável menor e a variável do número inicial(linha 10 github: 57).
+		inteiro number
+		inteiro cont = 1
+		
+		escreva("Digite um número: ")
+			leia(Ni)
+		Vma = Ni   // Deve guarda os dois valores iniciais dentro das duas vriáveis para que possa ser comparadas dentro da estrutura repetitiva.
+		Vme = Ni   // Elas sendo as iniciais, não é necessário atribuir valores à elas.
+		enquanto (cont <= 3){
+        // pode ser feito com qualquer estrutura sintática de repetição. deixei essa porque estava usando essa no momento, e fica mais fácil,
+           para quem está começando a aprender, entender, mesmo que não saiba da estrutura PARA. 
+			escreva("Digite um número ")
+				leia(number)    // já que as variáveis maior e menor já tem seu valor, devemos requisitar outra para comparar com os valores iniciais.
+			se (number > Vma){
+				Vma = number
+			}
+			se (number < Vme){
+				Vme = number
+			}
+			cont++
+		}
+		escreva("O maior valor é: ",Vma)
+		escreva("\nO menor valor é: ",Vme)
+	}
+}
+
