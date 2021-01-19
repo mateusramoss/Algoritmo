@@ -1,6 +1,6 @@
 ﻿programa
 {
-	
+	respondido por: github.com/mateusramoss
 	funcao inicio()
 	{
 		inteiro ni = 1, b
