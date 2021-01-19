@@ -1,0 +1,38 @@
+programa
+{
+  respondido por: github.com/mateusramoss
+	// Desenvolver um algoritmo que leia um número não determinado de valores e calcule e escreva a média  aritmética  dos  valores  lidos,  a  quantidade 
+  // de  valores  positivos,  a  quantidade  de  valores  negativos e o percentual de valores negativos e positivos. 
+  fonte : https://docente.ifrn.edu.br/jonathanpereira/disciplinas/algoritmos/lista-de-exercicios-estruturas-de-repeticao-1/view
+	funcao inicio()
+	{
+		real nume, quant
+		real media = 0.0, Qnume = 0.0
+		real Qnegnum = 0.0, Qposnum = 0.0
+		
+		escreva("Quantas números serão digitados? ")
+			leia(quant)//Quantidade da repetição.
+		limpa()
+		
+		para(inteiro cont = 1; cont <= quant; cont++){
+			escreva("Digite um número: ")
+				leia(nume)
+			limpa()
+			Qnume = Qnume + nume //Q = quantidade; nume = número
+			media = Qnume / quant
+			se (nume < 0){// sempre que o número for digitado será comparado com 0, se for menor, ele será negativo, e será somado +1 na quantidade.
+                    //o mesmo com a comparação seguinte.
+				Qnegnum = Qnegnum + 1
+			}
+			se (nume > 0){
+				Qposnum = Qposnum + 1
+			}
+		}
+		// O percentual é a divisão da quantidade da quantidade de números negativos ou positivo pela quantidade de números.
+		escreva("\nMédia aritmética  dos  valores: ", media)
+		escreva("\nQuantidade  de  valores  positivos: ",Qposnum)
+		escreva("\nQuantidade  de  valores negativos: ", Qnegnum)
+		escreva("\npercentual de valores positivos: ",Qposnum,"/",quant)
+		escreva("\npercentual de valores negativos: ",Qnegnum,"/",quant)
+	}
+}
