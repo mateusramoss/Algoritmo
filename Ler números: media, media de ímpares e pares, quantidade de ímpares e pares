@@ -1,0 +1,53 @@
+programa
+{
+	//Resolvido por: github.com/mateusramoss
+  //Fonte do exercício: https://docente.ifrn.edu.br/jonathanpereira/disciplinas/algoritmos/lista-de-exercicios-estruturas-de-repeticao-1/view
+/*
+	* Faça um algoritmo estruturado que leia uma quantidade não determinada de números positivos. 
+	* Calcule a quantidade de números pares e ímpares, a média de valores pares e a média geral dos números lidos. 
+	* O número que encerrará a leitura será zero.
+	 */
+	funcao inicio()
+	{
+		inteiro number
+		real media = 1.0
+		inteiro par = 0, impar = 0
+		real media_par = 0.0, media_impar = 0.0
+		real number2_par = 0.0, number2_impar = 0.0
+		real number_media = 0.0
+		real cont_media = 1.0	
+		real cont_media_impar = 0.0, cont_media_par = 0.0
+		
+		escreva("O número que terminará a execução do programa é '0'")
+		escreva("\nDigite um número diferente de 0 para iniciar: ")
+			leia(number)
+		limpa()
+		faca{
+			se (number % 2 == 0 ){
+				par = par + 1
+				number2_par = number2_par + number
+				cont_media_par = cont_media_par + 1
+				media_par = number2_par/cont_media_par
+			}
+			se (number % 2 == 1){
+				impar = impar + 1
+				number2_impar = number2_impar + number
+				cont_media_impar = cont_media_impar + 1
+				media_impar = number2_impar/cont_media_impar
+				
+			}
+			number_media = number_media + number
+			media = number_media/cont_media
+			escreva("Digite um número diferente de 0 para continuar:")
+				leia(number)
+			limpa()
+			cont_media = cont_media + 1
+			
+		}enquanto(number != 0)
+		escreva("Quantidade de números ímpares: ", impar)
+		escreva("\nQuantidade de números pares: ", par)
+		escreva("\nMédia de todos os valores lidos: ", media)
+		escreva("\nMédia de todos os valores ímpares: ",media_impar)
+		escreva("\nMédia de todos os valores pares: ",media_par)
+	}
+}
