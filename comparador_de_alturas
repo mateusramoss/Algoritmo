@@ -1,5 +1,6 @@
 programa
-{
+{	
+	respondido por: github.com/mateusramoss
 	//A explicação da lógica do código está na parte de baixo do " "núcleo" do código"
 	//Fonte do exercício: https://docente.ifrn.edu.br/jonathanpereira/disciplinas/algoritmos/lista-de-exercicios-estruturas-de-repeticao-1/view
 	funcao inicio()
