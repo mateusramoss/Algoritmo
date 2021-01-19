@@ -1,0 +1,44 @@
+programa
+{
+  // Respondido por: github.com/mateusramoss
+  // Fonte do exercício: https://docente.ifrn.edu.br/jonathanpereira/disciplinas/algoritmos/lista-de-exercicios-estruturas-de-repeticao-1/view
+	funcao inicio()
+	{
+		inteiro entre0e25 = 0 // Foram atribuídos valores 0 neles, porque não há valor algum que pertença-os no início do programa.
+		inteiro entre26e50 = 0
+		inteiro entre51e75 = 0
+		inteiro entre76e100 = 0
+		inteiro numero = 0 // Já que o exercício logo no início está comparando o número com 0 antes mesmo de escrever o pedido de um número, devemos atribuir a ele o valor.
+		
+		enquanto(numero >= 0){ 
+    // Já que no exercício diz que, enquanto o número for diferente de negativo, ele continua.
+    // Se a comparação for (numero > 0) o programa terminará antes de começar, porque atribuímos o valor 0 a ele na linha 11. Por isso deve-se 
+    // comparar com maior ou igual a (>=). Essa comparação dupla é parecido com o comparador lógico (OU), se um dos dois forem verdadeiro, dá verdadeiro,
+    // ou seja, a instrução continuará. 
+    
+			escreva("Digite um número: ")
+				leia(numero)
+			limpa()
+			
+			se ((numero >= 0) e (numero<=25)){ // se algum número digitado for maior ou igual a 0 e menor ou igual a 25, ou seja, se ele estiver entre
+        entre0e25 = entre0e25 + 1        //0 e 25, é atribuído o valor a variável. A mesma lógica vale para as outras estruturas abaixo.
+			}
+			se ((numero >=26) e (numero <= 50)){
+				entre26e50 = entre26e50 + 1
+			}
+			se((numero >= 51) e (numero <= 75)){
+				entre51e75 = entre51e75 + 1
+			}
+			se((numero >=76)e(numero <= 100)){
+				entre76e100 = entre76e100 + 1 
+			}
+		
+		}
+		
+		escreva("Entre 0 e 25 há: ",entre0e25," números")
+		escreva("\nEntre 26 e 50 há: ",entre26e50," números")
+		escreva("\nEntre 51 e 75 há: ",entre51e75," números")
+		escreva("\nEntre 76 e 100 há: ",entre76e100," números")
+    
+	}
+}
