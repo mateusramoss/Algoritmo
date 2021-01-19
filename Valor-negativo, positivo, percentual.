@@ -1,20 +1,21 @@
 programa
 {
-  respondido por: github.com/mateusramoss
-	// Desenvolver um algoritmo que leia um número não determinado de valores e calcule e escreva a média  aritmética  dos  valores  lidos,  a  quantidade 
-  // de  valores  positivos,  a  quantidade  de  valores  negativos e o percentual de valores negativos e positivos. 
-  fonte : https://docente.ifrn.edu.br/jonathanpereira/disciplinas/algoritmos/lista-de-exercicios-estruturas-de-repeticao-1/view
+  //respondido por: github.com/mateusramoss
+  // Desenvolver um algoritmo que leia um número não determinado de valores e calcule e escreva a média  aritmética  dos  valores  lidos,  a  quantidade 
+  // de valores  positivos,  a  quantidade  de  valores  negativos e o percentual de valores negativos e positivos. 
+  // fonte : https://docente.ifrn.edu.br/jonathanpereira/disciplinas/algoritmos/lista-de-exercicios-estruturas-de-repeticao-1/view
+  
+	inclua biblioteca Matematica --> mat// A sintaxe deve ser escrita fora da linha de dentro da "função inicio()"
+					    //escreva primeiro: inclua biblioteca "nome da biblioteca" --> "atribuir um apelido à ela" para não precisar escrever 
+					    //sempre o nome inteiro dela.
 	funcao inicio()
 	{
-		real nume, quant
+		real nume, quant = 0.0
 		real media = 0.0, Qnume = 0.0
 		real Qnegnum = 0.0, Qposnum = 0.0
-		
-		escreva("Quantas números serão digitados? ")
-			leia(quant)//Quantidade da repetição.
-		limpa()
-		
-		para(inteiro cont = 1; cont <= quant; cont++){
+		caracter resposta = 's'// Foi atribuído o valor no início porque o algoritmo começa verificando a resposta, se for diferente desses caracteres irá 
+			   	       //terminar.
+		faca{
 			escreva("Digite um número: ")
 				leia(nume)
 			limpa()
@@ -27,12 +28,19 @@ programa
 			se (nume > 0){
 				Qposnum = Qposnum + 1
 			}
-		}
+			escreva("Quer continuar? [S/N] ")
+				leia(resposta)
+			limpa()
+			quant = quant + 1 //-sempre que rodar mais uma vez, será atribuído +1 na variável quant, para que seja calculado a média.
+					  //-Sendo que a média é dividida pelo números de elemento no conjunto.
+		}enquanto((resposta == 's') ou (resposta == 'S'))
+		
 		// O percentual é a divisão da quantidade da quantidade de números negativos ou positivo pela quantidade de números.
-		escreva("\nMédia aritmética  dos  valores: ", media)
+		
+		escreva("\nMédia aritmética  dos  valores: ", mat.arredondar(media, 2))//para usar a biblioteca: linha(7)
 		escreva("\nQuantidade  de  valores  positivos: ",Qposnum)
 		escreva("\nQuantidade  de  valores negativos: ", Qnegnum)
-		escreva("\npercentual de valores positivos: ",Qposnum,"/",quant)
-		escreva("\npercentual de valores negativos: ",Qnegnum,"/",quant)
+		escreva("\npercentual de valores positivos: ", Qposnum,"/", quant)
+		escreva("\npercentual de valores negativos: ", Qnegnum,"/", quant)
 	}
 }
