@@ -1,0 +1,23 @@
+programa
+{
+		/*
+		 * 6) Escrever um algoritmo que gera e escreve os números ímpares entre 100 e 200. 
+		 */
+     // Resolvido pro: github.com/mateusramoss
+     // Fonte do exercício: 
+	funcao inicio()
+	{
+  
+		inteiro impar
+    //Faça um contador que conte de um número inicial ao número final, e toda vez que o contador somar +1 na variável cont, ele irá verificar se a divisão de cont
+    // entre 2 tiver o resto 1, lembre-se que para saber se um número é ímpar, divide por 2 e o resto for 1, ele é ímpar.
+		
+    para(inteiro cont = 100; cont <= 200 ; cont++){
+			se (cont % 2 == 1){
+				impar = cont
+				escreva("\n",impar,"..")// O escreva tem de ser escrito dentro da condição, senão irá repetir o mesmo número até que receba outro valor ímpar
+			}
+		}
+    
+	}
+}
