@@ -1,0 +1,85 @@
+programa
+{
+	
+	//	Criado e Resolvido por: github.com/mateusramoss
+	// Sinta-se livre para modificar e otimizá-lo.
+	/*
+	 *  	Escreva  um  algoritmo  que  leia  os tres primeiros valores de uma p.a, mostrar os valores da 1° posição 
+	 *  até a posição digitada,  calcular a posição desejada e mostrar determinada posição dela e a soma de todos 
+	 *  os termo.
+	 */	
+	 
+	funcao inicio()
+	{
+		inteiro a1, a2, a3
+		inteiro enesimo, razao = 0, valor_enesimo
+		inteiro contador_posicao = 1
+		caracter resposta = 's'
+		/*
+		 *  O programa começa verificando a variável resposta, se ela for (s) ou (S), ele começará, depois
+		 *  é necessário perguntar ao usuário se ele deseja continuar a utiizá-lo.
+		 */
+		faca{
+			
+			escreva ("Digite os três valores iniciais: ")
+				leia (a1, a2, a3)
+			limpa()
+			escreva ("Qual o enésimo termo que deseja calcular? ")
+				leia (enesimo) //	Aqui é pedido a posição que do valor que desejamos descobrir. 
+			limpa()	
+			
+			/*
+			 * 	Uma P.A. crescente começa com um valor pequeno e vai aumentando gradualmente. podemos, mas não é 
+			 * uma boa prática descobrir a razão a partir do primeiro termo com o segundo termo, por isso, foi 
+			 * colocado o segundo termo menos o terceiro.Não podemos tirar a razão a patir do primeiro termo 
+			 * menos o terceiro.
+			 */
+			//	Calcular razão positiva P.A. crescente:
+			se ((a1 < a2) e (a2 < a3)){
+				
+				se(a3 - a2 == a2 - a1){		
+					razao = a3 - a2
+				}
+			}
+			/*
+			 * //P.A. decrescente:Já que uma P.A. decrescente começa com um número e vai sendo subdubtraído por 
+			 * uma razão, ou seja, a razão é negativa. E para termos uma razão negativa, colocamos o menor número 
+			 * na frente do maior.
+			 * 	(1)Ex.: o terceiro termo - o segundo.(linha 43)
+			 */
+			 //Calcular razão negativa P.A. decrescente:
+			se ((a1 > a2) e (a2 > a3)){
+				
+				se (a2 - a3 == a1 - a2){		
+					razao = a2 - a1	//<-- (1)Ex.
+				}
+			}
+			// Fórmula para calcular o valor da posição digitada: "an = a1 + (n + 1) * r" 
+			valor_enesimo = a1 + (enesimo - 1) * razao
+			/*
+			 * 	Foi colocada aqui porque não tinhamos o valor da razao.
+			 */
+			
+			escreva ("O enésimo ",enesimo, " termo dessa P.A é igual a ", valor_enesimo)
+			escreva ("\n\nA contagem dos termos da posição 1 até a ", enesimo, " posição:\n")
+			
+			/* 
+			 * 	A contagem para mostrar o valor de cada posição funciona de tal modo: 
+			 * o contador vai começar com o primeiro termo, já que ele na P.A. é o primeiro, não é preciso 
+			 * atribuir valor inicial como fazemos nos contadores, onde atribuímo 0 à ele.
+			 * sempre que tiver uma nova comparação, sendo ela verdadeira, será adicionado mais a razão.
+			 * 	O contador da posição é declarado no escopo inicial do programa para começar com 1, se começar
+			 * com (0), irá mostrar a posição (0) em vez da posição (1).	
+			 */
+			para (inteiro contador = a1; contador >= valor_enesimo; contador = contador + (razao)){
+				escreva ("\n",contador_posicao, "° termo: ", contador)
+				contador_posicao = contador_posicao + 1
+			}
+			escreva ("\n\nA soma de todos os valores é igual a ", ((a1 + valor_enesimo) * enesimo)/2, "\n")
+      // Fórmula para calcular a soma de todos os termos da P.A. "((a1+an)*n)/2"
+			escreva("\nQuer continuar? [S/N] ")
+				leia(resposta)
+				
+		}enquanto((resposta == 's') ou (resposta == 'S'))
+	}
+}
