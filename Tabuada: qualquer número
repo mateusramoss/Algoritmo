@@ -15,8 +15,9 @@ programa
 			leia(numero)  // Pede o número para saber qual tabuada será calculada.
       
 		para(inteiro contador = 1; contador<= 10; contador++){
-			escreva("\n", numero, " x ", contador, " = ", (numero*contador))// O contador começa com 1 porque todo número multiplicado por 0 é = 0.
-                                                                      // Sempre que terminar uma leitura da estrutura e voltar para o início, será somado +1 na variável.
+			escreva("\n", numero, " x ", contador, " = ", (numero*contador))
+			// O contador começa com 1 porque todo número multiplicado por zero tem resultado igual a zero.
+			// Sempre que terminar uma leitura da estrutura e voltar para o início, será somado +1 na variável.
 		}
     
 	}
