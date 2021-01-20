@@ -5,8 +5,7 @@ programa
 	// Sinta-se livre para modificar e otimizá-lo.
 	/*
 	 *  	Escreva  um  algoritmo  que  leia  os tres primeiros valores de uma p.a, mostrar os valores da 1° posição 
-	 *  até a posição digitada,  calcular a posição desejada e mostrar determinada posição dela e a soma de todos 
-	 *  os termo.
+	 *  até a posição desejada,  calcular a posição desejada e mostrá-la e a soma de todos os termos dela.
 	 */	
 	 
 	funcao inicio()
