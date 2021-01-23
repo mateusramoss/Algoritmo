@@ -10,12 +10,12 @@ programa
 		real altura
 		cadeia nome2, nome3, nome 
 
-		escreva("Quantas pessoas serão comparadas? ")
+		escreva ("Quantas pessoas serão comparadas? ")
 			leia(compara)
 		limpa()
 		escreva("Digite o 1° nome: ")
 				leia(nome)
-		escreva("\nDigite a altura (em metros) de ",nome,": ")
+		escreva ("\nDigite a altura (em metros) de ", nome, ": ")
 				leia(altura_inicial)
 		limpa()
 		
@@ -25,13 +25,13 @@ programa
 		menor_altura = altura_inicial
 		nome3 = nome
 		
-		para(inteiro contador = 2; contador <= compara; contador++){
+		para (inteiro contador = 2; contador <= compara; contador++){
     // o contador começa recebendo 2 porque a primeira altura já foi recebida fora da estrutura PARA.
     //  não faz diferença na contagem que foi perguntado no início(linha 11) do código.
-			escreva("Digite o ",contador,"° nome: ")
+			escreva ("Digite o ",contador,"° nome: ")
 				leia(nome)
-			escreva("\nDigite a altura (em metros) de ",nome,": ")
-				leia(altura)
+			escreva ("\nDigite a altura (em metros) de ", nome, ": ")
+				leia (altura)
 			limpa()
 			se (altura > maior_altura){
 				maior_altura = altura
@@ -42,8 +42,8 @@ programa
 				nome3 = nome
 			}
 		}
-		escreva("O(a) maior é ",nome2 ," com ",maior_altura," metros de altura\n")
-		escreva("O(a) menor é ",nome3," com ",menor_altura," metros de altura")
+		escreva("O(a) maior é ", nome2, " com ",maior_altura, " metros de altura \n")
+		escreva("O(a) menor é ", nome3, " com ",menor_altura, " metros de altura ")
 	}
 }
 
@@ -56,7 +56,7 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro Vma, Vme, Ni // São as variáveis maior,variável menor e a variável do número inicial(linha 10 github: 57).
+		inteiro Vma, Vme, Ni // São as variáveis maior,variável menor e a variável do número inicial(linha: portugol: 10, github: 57).
 		inteiro number
 		inteiro cont = 1
 		
