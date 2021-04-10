@@ -65,8 +65,8 @@ programa
 		Vma = Ni   // Deve guarda os dois valores iniciais dentro das duas vriáveis para que possa ser comparadas dentro da estrutura repetitiva.
 		Vme = Ni   // Elas sendo as iniciais, não é necessário atribuir valores à elas.
 		enquanto (cont <= 3){
-        // pode ser feito com qualquer estrutura sintática de repetição. deixei essa porque estava usando essa no momento, e fica mais fácil,
-           para quem está começando a aprender, entender, mesmo que não saiba da estrutura PARA. 
+        // pode ser feito com qualquer estrutura sintática de repetição. deixei essa porque estava usando essa no momento, e fica mais fácil
+           para quem está começando a aprender/entender, mesmo que não saiba da estrutura PARA. 
 			escreva("Digite um número ")
 				leia(number)    // já que as variáveis maior e menor já tem seu valor, devemos requisitar outra para comparar com os valores iniciais.
 			se (number > Vma){
