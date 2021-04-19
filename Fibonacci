@@ -1,0 +1,21 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro valor_inicial = 0 
+		inteiro valor_final = 1
+		inteiro resultado =  valor_inicial + valor_final
+		
+		escreva("Os cincos primeiros números da sequência Fibonacci: ")
+		escreva("\n", valor_inicial, "..", valor_final, "..")
+		
+		para(inteiro cont = 0; cont <= 5; cont++){
+			escreva(resultado, "..")
+			
+			valor_inicial = valor_final(valor antigo)
+			valor_final = resultado(valor antigo)
+			resultado = (valor_inicial + valor_final)(valores novos)
+		}
+	}
+}
