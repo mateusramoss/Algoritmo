@@ -1,0 +1,50 @@
+programa
+{
+
+	
+/*
+	*   Faça um algoritmo estruturado que leia uma quantidade não determinada de números positivos.
+	* Calcule a quantidade de números paires e ímpaires, a média de valores paires e a média geral dos
+	* números lidos. O número que encerrará a leitura será zero.
+	*/
+	
+	funcao inicio()
+	{
+		inteiro amount, number, media = 0
+		inteiro positivo = 0
+		inteiro odd = 0, pair = 0
+		inteiro amount_media = 0
+		inteiro number_of_numbers = 0
+			
+		para(inteiro cont = 0; cont <= 10; cont++){
+			
+			
+			
+			escreva("Write a number. If you want to finish the looping, write the number zero: ")
+				leia(number)
+				limpa()
+				
+			amount_media = (amount_media + number)
+			
+			number_of_numbers = (number_of_numbers + 1)
+			
+			se(number % 2 == 1){
+				odd = (odd + 1)
+			}
+			se(number % 2 == 0){
+				pair = (pair + 1)
+			}
+
+			media = (amount_media / number_of_numbers)
+			
+			se(number == 0){
+				cont = 10
+				pair = pair--
+			}
+		}
+		
+		escreva("\nThe numbers of odds numbers is: ", odd)
+		escreva("\nThe numbers of pairs numbers is: ", pair)
+		escreva("\nThe media of the numbers typed is: ", media)
+	}
+}
